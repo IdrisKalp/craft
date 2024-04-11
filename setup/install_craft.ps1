@@ -138,7 +138,7 @@ if ($Script:localdev) {
 Copy-Item "$Script:localdev\Setup\CraftBootstrap.py" -Dest "$Script:installRoot\download\CraftBootstrap.py"
 Write-Host "Copied local CraftBootstrap.py"
 } else {
-$url = "https://raw.githubusercontent.com/KDE/craft/$Script:branch/setup/CraftBootstrap.py"
+$url = "https://raw.githubusercontent.com/IdrisKalp/craft/$Script:branch/setup/CraftBootstrap.py"
 Write-Host "Downloading:" $url
 (new-object net.webclient).DownloadFile("$url", "$Script:installRoot\download\CraftBootstrap.py")
 
