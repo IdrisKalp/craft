@@ -213,10 +213,10 @@ def getABI(args, qtMajorVersion):
     abi = None
     if CraftBootstrap.isWin():
         platform = "windows"
-        msvcVer = "Microsoft Visual Studio 2019" if qtMajorVersion == "5" else "Microsoft Visual Studio 2022"
+        msvcVer = "Microsoft Visual Studio 2022" if qtMajorVersion == "5" else "Microsoft Visual Studio 2022"
         abi, compiler = CraftBootstrap.promptForChoice(
             "Select compiler",
-            [("Mingw-w64", (None, "gcc")), (msvcVer, ("msvc2019" if qtMajorVersion == "5" else "msvc2022", "cl"))],
+            [("Mingw-w64", (None, "gcc")), (msvcVer, ("msvc2022" if qtMajorVersion == "5" else "msvc2022", "cl"))],
             msvcVer,
             returnDefaultWithoutPrompt=args.use_defaults,
         )
